@@ -17,17 +17,17 @@
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="resources.html">Resources</a></li>
-            <li><a href="forums.html">Forums</a></li>
             <li><a href="counseling.html" class="active">Counseling</a></li>
-            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="forums.html">Forums</a></li>
             <li><a href="#">Login</a></li>
         </ul>
     </nav>
 
-    <!-- Counseling Section -->
-    <section id="counseling">
-        <h2>Meet Our Counselors</h2>
-        <p>Connect with our experienced professionals to guide you through your mental health journey.</p>
+<!-- Counseling Section -->
+<section id="counseling">
+    <h2>Meet Our Counselors</h2>
+    <p>Connect with our experienced professionals to guide you through your mental health journey.</p>
+    <div class="counselors-scroll">
         <div class="counselors-grid">
             <!-- Counselor Item 1 -->
             <div class="counselor-item">
@@ -50,63 +50,87 @@
                 <p>Therapist</p>
                 <p>MSW, Licensed Clinical Social Worker</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Appointment Booking Section -->
-    <section id="booking">
-        <h2>Book an Appointment</h2>
-        <p>Fill out the form below to schedule a consultation with one of our counselors.</p>
-        <form action="#" method="POST" class="booking-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="phone" placeholder="Your Phone Number" required>
-            <textarea placeholder="Message (optional)" rows="4"></textarea>
-            <select required>
-                <option value="" disabled selected>Select Counselor</option>
-                <option value="dr_sudip">Dr. Sudip Poudel</option>
-                <option value="mr_sakar">Mr. Sakar Pudasaini</option>
-                <option value="mr_nabaraj">Mr. Nabaraj Poudel</option>
-            </select>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-item">
-                <p>"Uplift has changed my life. The counselors are compassionate and understanding."</p>
-                <h3>- Aisha K.</h3>
+            <!-- Additional Counselor Items -->
+            <div class="counselor-item">
+                <img src="c4.jpeg" alt="Counselor 4" class="counselor-image">
+                <h3>Mr. Saroj Lamichhane</h3>
+                <p>Counselor</p>
+                <p>MSc in Counseling Psychology</p>
             </div>
-            <div class="testimonial-item">
-                <p>"I felt so supported throughout my journey. Highly recommend!"</p>
-                <h3>- James L.</h3>
+            <div class="counselor-item">
+                <img src="c5.jpeg" alt="Counselor 5" class="counselor-image">
+                <h3>Dr. Anish Devkota</h3>
+                <p>Psychologist</p>
+                <p>PhD in Behavioral Science</p>
             </div>
-            <div class="testimonial-item">
-                <p>"The resources and guidance I received were invaluable. Thank you, Uplift!"</p>
-                <h3>- Priya R.</h3>
-            </div>
+            <!-- Add more counselors as needed -->
         </div>
-    </section>
+    </div>
+                                    <!-- View All Link -->
+                                    <div class="view-all">
+                                        <a href="counseling.html">View All <span class="arrow">&rarr;</span></a>
+                                    </div>
+</section>
 
-    <!-- FAQs Section -->
-    <section id="faqs">
-        <h2>Frequently Asked Questions</h2>
+
+<!-- Appointment Booking Section -->
+<section id="booking">
+    <div class="booking-container">
+        <div class="booking-text">
+            <h2>Book an Appointment</h2>
+            <p>Fill out the form below to schedule a consultation with one of our counselors.</p>
+        </div>
+        <div class="booking-form-container">
+            <form action="#" method="POST" class="booking-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <textarea placeholder="Message (optional)" rows="4"></textarea>
+                <select required>
+                    <option value="" disabled selected>Select Counselor</option>
+                    <option value="dr_sudip">Dr. Sudip Poudel</option>
+                    <option value="mr_sakar">Mr. Sakar Pudasaini</option>
+                    <option value="mr_nabaraj">Mr. Nabaraj Poudel</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs Section -->
+<section id="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
         <div class="faq-item">
-            <h3>What types of counseling do you offer?</h3>
-            <p>We offer individual counseling, group therapy, and family counseling.</p>
+            <h3 class="faq-question" data-toggle="faq1">What types of counseling do you offer?</h3>
+            <p class="faq-answer" id="faq1">We offer individual counseling, group therapy, and family counseling.</p>
         </div>
         <div class="faq-item">
-            <h3>How do I know if counseling is right for me?</h3>
-            <p>If you're feeling overwhelmed, anxious, or just need someone to talk to, counseling can be very beneficial.</p>
+            <h3 class="faq-question" data-toggle="faq2">How do I know if counseling is right for me?</h3>
+            <p class="faq-answer" id="faq2">If you're feeling overwhelmed, anxious, or just need someone to talk to, counseling can be very beneficial.</p>
         </div>
         <div class="faq-item">
-            <h3>What should I expect in my first session?</h3>
-            <p>Your first session will focus on understanding your needs and establishing a rapport with your counselor.</p>
+            <h3 class="faq-question" data-toggle="faq3">What should I expect in my first session?</h3>
+            <p class="faq-answer" id="faq3">Your first session will focus on understanding your needs and establishing a rapport with your counselor.</p>
         </div>
-    </section>
+        <div class="faq-item">
+            <h3 class="faq-question" data-toggle="faq4">Can I choose my counselor?</h3>
+            <p class="faq-answer" id="faq4">Yes, you can choose your counselor based on their expertise and your preferences.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" data-toggle="faq5">How long do the sessions last?</h3>
+            <p class="faq-answer" id="faq5">Sessions typically last between 50 to 60 minutes, depending on the type of counseling.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question" data-toggle="faq6">What if I need to cancel my appointment?</h3>
+            <p class="faq-answer" id="faq6">We understand that life happens. Please inform us as soon as possible, and we'll reschedule your appointment.</p>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- Footer Section -->
     <footer>

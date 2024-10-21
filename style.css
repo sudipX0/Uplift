@@ -501,67 +501,94 @@ footer a:hover {
 
 /* Booking Section */
 #booking {
-    padding: 40px 20px; /* Padding around the section */
-    text-align: center; /* Center align text */
+    padding: 60px 20px; /* Increased padding for a more spacious layout */
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+.booking-container {
+    display: flex; /* Flex layout for side-by-side content */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between; /* Space between items */
+    max-width: 1200px; /* Limit maximum width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Centered Text Container */
+.booking-text {
+    flex: 1; /* Allow text to take available space */
+    text-align: center; /* Center align text */
+    margin-right: 20px; /* Margin to separate text from the form and image */
+}
+
+.booking-form-container {
+    max-width: 500px; /* Reduced max width for the form container */
+    width: 100%; /* Make form responsive */
+}
+
+.booking-image-container {
+    flex: 1; /* Allow the image container to take available space */
+    text-align: center; /* Center align image */
+}
+
+.booking-image {
+    max-width: 90%; /* Reduced image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Existing styles for the booking form */
 .booking-form {
     display: flex; /* Flex layout for form */
     flex-direction: column; /* Stack elements vertically */
-    max-width: 400px; /* Max width for form */
     margin: 0 auto; /* Center the form */
+    background-color: white; /* White background for the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the form */
 }
 
 .booking-form input,
 .booking-form select,
 .booking-form textarea {
-    padding: 10px; /* Padding for inputs */
-    margin: 10px 0; /* Margin for spacing */
-    border: 1px solid #ddd; /* Light border */
+    padding: 12px; /* Increased padding for a more comfortable feel */
+    margin: 15px 0; /* More margin for better spacing */
+    border: 1px solid #ccc; /* Light border for inputs */
     border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #004aad; /* Change border color on focus */
+    outline: none; /* Remove default outline */
 }
 
 .booking-form button {
-    background-color: #004aad; /* Primary button color */
+    background-color: #000; /* Primary button color */
     color: white; /* White text color */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding for button */
+    padding: 12px; /* Slightly increased padding for the button */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition for background color */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background color and scaling */
+    font-size: 16px; /* Button font size */
 }
 
 .booking-form button:hover {
-    background-color: #003366; /* Darker shade on hover */
+    background-color: #004aad; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
 }
 
-/* Testimonials Section */
-#testimonials {
-    padding: 40px 20px; /* Padding around the section */
-    text-align: center; /* Center align text */
-    background-color: #f9f9f9; /* Light background for testimonials */
+/* Optional: Add styles for textarea to improve aesthetics */
+.booking-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 80px; /* Minimum height for textarea */
 }
 
-.testimonials-grid {
-    display: flex; /* Flex layout for testimonials */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-}
-
-.testimonial-item {
-    background-color: white; /* White background for testimonials */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside items */
-    margin: 10px 0; /* Margin for spacing */
-    max-width: 600px; /* Max width for testimonials */
-    text-align: left; /* Left align text */
-}
-
-.testimonial-item h3 {
-    margin-top: 10px; /* Margin above name */
-    font-weight: bold; /* Bold name */
-}
 
 /* FAQs Section */
 #faqs {
@@ -569,12 +596,99 @@ footer a:hover {
     text-align: center; /* Center align text */
 }
 
+.faq-container {
+    display: flex; /* Flex layout for container */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items */
+}
+
 .faq-item {
-    background-color: white; /* White background for FAQ items */
-    border: 1px solid #ddd; /* Light border */
+    background: rgba(255, 255, 255, 0.8); /* Glassy background */
+    border: 1px solid rgba(221, 221, 221, 0.5); /* Light border */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside items */
-    margin: 10px 0; /* Margin for spacing */
-    max-width: 600px; /* Max width for FAQ items */
+    margin: 10px; /* Margin for spacing */
+    max-width: 280px; /* Max width for FAQ items */
     text-align: left; /* Left align text */
+    backdrop-filter: blur(10px); /* Blur effect for glassy look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for scaling and shadow */
+    height: 150px; /* Fixed height for uniform boxes */
+    display: flex; /* Flex layout to align content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between items */
+}
+
+.faq-item:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.faq-answer {
+    display: none; /* Hide answers by default */
+    opacity: 0; /* Start with zero opacity for animation */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Optional: Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .faq-item {
+        max-width: 100%; /* Full width on smaller screens */
+        height: auto; /* Allow auto height on smaller screens */
+    }
+}
+
+/* Login Container Styles */
+.login-container {
+    max-width: 400px; /* Maximum width of the form */
+    margin: 50px auto; /* Center the form */
+    padding: 20px; /* Padding inside the form */
+    background-color: white; /* White background for form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+    text-align: center; /* Center align heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width of input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #004aad; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Login Button Styles */
+.login-btn {
+    background-color: #000; /* Button color */
+    color: white; /* Text color */
+    padding: 10px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width of button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.login-btn:hover {
+    background-color: #004aad; /* Darker blue on hover */
 }
